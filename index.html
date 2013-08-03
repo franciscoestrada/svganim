@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<title>SVG test</title>	 
+		<style>
+			
+			@-webkit-keyframes walk {
+				from { -webkit-transform: translate3d(0, 0, 0); }
+				to { -webkit-transform: translate3d(-100%, 0, 0); }          
+			}
+			
+			
+			
+			.anim {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 600px;
+				height: 600px;	
+				overflow: hidden;    
+			    
+				-webkit-transform: translateZ(0);    
+				-webkit-backface-visibility: hidden;
+				-webkit-perspective: 1000;
+			}
+			    
+			
+			
+			.svg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				width: 1200%;
+				height: 100%;
+				background-image: url(santa.svg);
+		
+				-webkit-animation: walk 1s steps(12, end) infinite;			    
+			}
+			
+		
+		</style>	
+	
+	</head>
+	
+	<body>
+
+		<div class="anim">
+			<div class="svg"></div>		
+		</div>		
+				
+	</body>
+
+</html>
